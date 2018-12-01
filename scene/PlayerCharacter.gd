@@ -2,6 +2,7 @@ extends Node2D
 
 export var motion = Vector2()
 export var speed = 250
+export var look_direction = Vector2(1, 0)
 
 func _ready():
 	# Called when the node is added to the scene for the first time.
