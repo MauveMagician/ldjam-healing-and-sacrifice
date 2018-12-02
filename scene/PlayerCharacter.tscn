@@ -33,6 +33,7 @@ _sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Transform",
 position = Vector2( 9.53674e-007, 4.76837e-006 )
 scale = Vector2( 2.34146, 2.46154 )
 shape = SubResource( 1 )
+_sections_unfolded = [ "Material", "Visibility" ]
 
 [node name="Pivot" type="Position2D" parent="." index="2"]
 
@@ -44,6 +45,7 @@ scale = Vector2( 1, 1 )
 position = Vector2( 42.0392, 0 )
 scale = Vector2( 1, 1 )
 script = ExtResource( 3 )
+_sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 
 [node name="Camera2D" type="Camera2D" parent="Pivot/CameraOffset" index="0"]
 

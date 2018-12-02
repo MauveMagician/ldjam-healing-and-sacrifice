@@ -1,0 +1,155 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scene/PlayerCharacter.gd" type="Script" id=1]
+[ext_resource path="res://spirtes/icon.png" type="Texture" id=2]
+[ext_resource path="res://scene/Pivot.gd" type="Script" id=3]
+[ext_resource path="res://scene/ColorCharacter.gd" type="Script" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10.6667, 10 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[node name="PlayerTree" type="Node"]
+
+[node name="PlayerCharacter" type="KinematicBody2D" parent="." index="0"]
+
+editor/display_folded = true
+position = Vector2( 424.125, 280 )
+scale = Vector2( 0.996094, 1 )
+input_pickable = false
+collision_layer = 2
+collision_mask = 2
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision", "Material", "Pause", "Pickable", "Transform", "Visibility", "Z Index", "collision" ]
+motion = Vector2( 0, 0 )
+speed = 250
+look_direction = Vector2( 1, 0 )
+
+[node name="sprite" type="Sprite" parent="PlayerCharacter" index="0"]
+
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Transform", "Visibility", "Z Index" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerCharacter" index="1"]
+
+position = Vector2( 9.53674e-007, 4.76837e-006 )
+scale = Vector2( 2.34146, 2.46154 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Material", "Visibility" ]
+
+[node name="Pivot" type="Position2D" parent="PlayerCharacter" index="2"]
+
+editor/display_folded = true
+position = Vector2( -7.15256e-007, 0 )
+
+[node name="CameraOffset" type="Position2D" parent="PlayerCharacter/Pivot" index="0"]
+
+editor/display_folded = true
+position = Vector2( 42.0392, 0 )
+script = ExtResource( 3 )
+_sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
+
+[node name="Camera2D" type="Camera2D" parent="PlayerCharacter/Pivot/CameraOffset" index="0"]
+
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit_left = -10000000
+limit_top = -10000000
+limit_right = 10000000
+limit_bottom = 10000000
+limit_smoothed = false
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = true
+smoothing_speed = 5.0
+offset_v = 0.0
+offset_h = 0.0
+drag_margin_left = 0.15
+drag_margin_top = 0.2
+drag_margin_right = 0.15
+drag_margin_bottom = 0.2
+editor_draw_screen = true
+editor_draw_limits = true
+editor_draw_drag_margin = true
+_sections_unfolded = [ "Drag Margin", "Editor", "Offset", "Smoothing", "Transform" ]
+
+[node name="RCharacter" type="KinematicBody2D" parent="." index="1"]
+
+editor/display_folded = true
+position = Vector2( 352, 320 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 4 )
+_sections_unfolded = [ "Collision" ]
+
+[node name="R" type="Sprite" parent="RCharacter" index="0"]
+
+scale = Vector2( 0.996094, 1 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Transform", "Visibility", "Z Index" ]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="RCharacter" index="1"]
+
+scale = Vector2( 2.33231, 2.46154 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Material", "Visibility" ]
+
+[node name="BCharacter" type="KinematicBody2D" parent="." index="2"]
+
+editor/display_folded = true
+position = Vector2( 496, 328 )
+scale = Vector2( 0.996094, 1 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 4 )
+_sections_unfolded = [ "Collision" ]
+
+[node name="B" type="Sprite" parent="BCharacter" index="0"]
+
+texture = ExtResource( 2 )
+region_filter_clip = true
+_sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Transform", "Visibility", "Z Index" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BCharacter" index="1"]
+
+position = Vector2( 1.90735e-005, -4.76837e-006 )
+scale = Vector2( 2.47119, 2.46154 )
+shape = SubResource( 2 )
+
+[node name="GCharacter" type="KinematicBody2D" parent="." index="3"]
+
+editor/display_folded = true
+position = Vector2( 424, 352 )
+scale = Vector2( 0.996094, 1 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 4 )
+_sections_unfolded = [ "Collision" ]
+
+[node name="G" type="Sprite" parent="GCharacter" index="0"]
+
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Transform", "Visibility", "Z Index" ]
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="GCharacter" index="1"]
+
+scale = Vector2( 2.34146, 2.46154 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Material", "Visibility" ]
+
+
