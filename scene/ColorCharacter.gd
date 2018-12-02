@@ -16,4 +16,5 @@ func _ready():
 func _process(delta):
 	if abs(abs(self.position.x) - abs(self.player.position.x)) > 50 or abs(abs(self.position.y) - abs(self.player.position.y)) > 50:
 		move_and_collide(0.05*(self.player.position-self.position))
-		
+	if abs(abs(self.position.x) - abs(self.player.position.x)) > 1000 or abs(abs(self.position.y) - abs(self.player.position.y)) > 1000:
+		self.position = player.position
