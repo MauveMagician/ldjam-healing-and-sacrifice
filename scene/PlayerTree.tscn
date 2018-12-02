@@ -15,12 +15,11 @@ extents = Vector2( 10.6667, 10 )
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="PlayerTree" type="Node"]
+[node name="PlayerTree" type="Node" index="0"]
 
 [node name="PlayerCharacter" type="KinematicBody2D" parent="." index="0"]
 
-editor/display_folded = true
-position = Vector2( 424.125, 280 )
+position = Vector2( 513.125, 340 )
 scale = Vector2( 0.996094, 1 )
 input_pickable = false
 collision_layer = 2
@@ -51,13 +50,14 @@ position = Vector2( -7.15256e-007, 0 )
 
 [node name="CameraOffset" type="Position2D" parent="PlayerCharacter/Pivot" index="0"]
 
-editor/display_folded = true
 position = Vector2( 42.0392, 0 )
 script = ExtResource( 3 )
 _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 
 [node name="Camera2D" type="Camera2D" parent="PlayerCharacter/Pivot/CameraOffset" index="0"]
 
+position = Vector2( -106.416, -1.25 )
+scale = Vector2( 1, 0.664063 )
 anchor_mode = 1
 rotating = false
 current = true
@@ -84,14 +84,13 @@ _sections_unfolded = [ "Drag Margin", "Editor", "Offset", "Smoothing", "Transfor
 
 [node name="RCharacter" type="KinematicBody2D" parent="." index="1"]
 
-editor/display_folded = true
-position = Vector2( 352, 320 )
+position = Vector2( 414, 341 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 4 )
-_sections_unfolded = [ "Collision" ]
+_sections_unfolded = [ "Collision", "collision" ]
 
 [node name="R" type="Sprite" parent="RCharacter" index="0"]
 
@@ -107,15 +106,14 @@ _sections_unfolded = [ "Material", "Visibility" ]
 
 [node name="BCharacter" type="KinematicBody2D" parent="." index="2"]
 
-editor/display_folded = true
-position = Vector2( 496, 328 )
+position = Vector2( 315, 339 )
 scale = Vector2( 0.996094, 1 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 4 )
-_sections_unfolded = [ "Collision" ]
+_sections_unfolded = [ "Collision", "collision" ]
 
 [node name="B" type="Sprite" parent="BCharacter" index="0"]
 
@@ -131,25 +129,24 @@ shape = SubResource( 2 )
 
 [node name="GCharacter" type="KinematicBody2D" parent="." index="3"]
 
-editor/display_folded = true
-position = Vector2( 424, 352 )
+position = Vector2( 232, 334 )
 scale = Vector2( 0.996094, 1 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 4 )
-_sections_unfolded = [ "Collision" ]
+_sections_unfolded = [ "Collision", "collision" ]
 
 [node name="G" type="Sprite" parent="GCharacter" index="0"]
 
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Transform", "Visibility", "Z Index" ]
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="GCharacter" index="1"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="GCharacter" index="1"]
 
-scale = Vector2( 2.34146, 2.46154 )
-shape = SubResource( 1 )
-_sections_unfolded = [ "Material", "Visibility" ]
+position = Vector2( 0.219177, 0.458528 )
+scale = Vector2( 2.47119, 2.46154 )
+shape = SubResource( 2 )
 
 

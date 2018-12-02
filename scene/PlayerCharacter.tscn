@@ -9,7 +9,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 10.6667, 10 )
 
-[node name="PlayerCharacter" type="KinematicBody2D" index="0"]
+[node name="PlayerCharacter" type="KinematicBody2D"]
 
 position = Vector2( 424.125, 280 )
 scale = Vector2( 0.996094, 1 )
@@ -38,18 +38,15 @@ _sections_unfolded = [ "Material", "Visibility" ]
 [node name="Pivot" type="Position2D" parent="." index="2"]
 
 position = Vector2( -7.15256e-007, 0 )
-scale = Vector2( 1, 1 )
 
 [node name="CameraOffset" type="Position2D" parent="Pivot" index="0"]
 
 position = Vector2( 42.0392, 0 )
-scale = Vector2( 1, 1 )
 script = ExtResource( 3 )
 _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 
 [node name="Camera2D" type="Camera2D" parent="Pivot/CameraOffset" index="0"]
 
-scale = Vector2( 1, 1 )
 anchor_mode = 1
 rotating = false
 current = true
