@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scene/Bullet.gd" type="Script" id=1]
+[ext_resource path="res://spirtes/icon.png" type="Texture" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 10.0
+
+[node name="Bullet" type="Area2D" index="0"]
+
+position = Vector2( 24, 24 )
+scale = Vector2( 0.75, 0.75 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 2
+collision_mask = 2
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision" ]
+speed = 0
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+position = Vector2( 3.24249e-005, 2.67029e-005 )
+scale = Vector2( 0.999999, 0.999999 )
+texture = ExtResource( 2 )
+
+[node name="Hurtbox" type="CollisionShape2D" parent="." index="1"]
+
+position = Vector2( -1.90735e-006, -1.90735e-006 )
+scale = Vector2( 2.46154, 2.46154 )
+shape = SubResource( 1 )
+
+[connection signal="body_entered" from="." to="." method="_on_Bullet_body_entered"]
+
+

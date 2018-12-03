@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://spirtes/icon.png" type="Texture" id=1]
 [ext_resource path="res://scene/PlayerTree.tscn" type="PackedScene" id=2]
 [ext_resource path="res://tiles/FloorTileset.tres" type="TileSet" id=3]
+[ext_resource path="res://scene/UI.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scene/Basic_Shooting_Enemy.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scene/Chaser_Enemy.tscn" type="PackedScene" id=6]
 
 [node name="Node" type="Node"]
 
@@ -33,5 +36,15 @@ occluder_light_mask = 1
 format = 1
 tile_data = PoolIntArray( 196619, 1, 0, 262155, 1, 0, 327691, 1, 0, 393216, 0, 0, 393217, 0, 0, 393218, 0, 0, 393219, 0, 0, 393220, 0, 0, 393221, 0, 0, 393222, 0, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 393226, 0, 0, 393227, 0, 0, 393228, 0, 0, 393229, 0, 0, 393230, 0, 0 )
 _sections_unfolded = [ "Collision" ]
+
+[node name="UI" parent="." index="3" instance=ExtResource( 4 )]
+
+[node name="Shooting_Enemy" parent="." index="4" instance=ExtResource( 5 )]
+
+position = Vector2( 464, 144 )
+
+[node name="Enemy" parent="." index="5" instance=ExtResource( 6 )]
+
+position = Vector2( 632, 216 )
 
 

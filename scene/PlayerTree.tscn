@@ -19,6 +19,7 @@ extents = Vector2( 10, 10 )
 
 [node name="PlayerCharacter" type="KinematicBody2D" parent="." index="0"]
 
+editor/display_folded = true
 position = Vector2( 513.125, 340 )
 scale = Vector2( 0.996094, 1 )
 input_pickable = false
@@ -84,6 +85,7 @@ _sections_unfolded = [ "Drag Margin", "Editor", "Offset", "Smoothing", "Transfor
 
 [node name="RCharacter" type="KinematicBody2D" parent="." index="1"]
 
+editor/display_folded = true
 position = Vector2( 414, 341 )
 input_pickable = false
 collision_layer = 1
@@ -106,6 +108,7 @@ _sections_unfolded = [ "Material", "Visibility" ]
 
 [node name="BCharacter" type="KinematicBody2D" parent="." index="2"]
 
+editor/display_folded = true
 position = Vector2( 315, 339 )
 scale = Vector2( 0.996094, 1 )
 input_pickable = false
@@ -129,6 +132,7 @@ shape = SubResource( 2 )
 
 [node name="GCharacter" type="KinematicBody2D" parent="." index="3"]
 
+editor/display_folded = true
 position = Vector2( 232, 334 )
 scale = Vector2( 0.996094, 1 )
 input_pickable = false

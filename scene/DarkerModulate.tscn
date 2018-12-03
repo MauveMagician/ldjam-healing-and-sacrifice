@@ -1,0 +1,10 @@
+[gd_scene format=2]
+
+[node name="DarkerModulate" type="CanvasModulate"]
+
+position = Vector2( 512, 300 )
+scale = Vector2( 16, 9.375 )
+color = Color( 0.335938, 0.335938, 0.335938, 1 )
+_sections_unfolded = [ "Material", "Visibility" ]
+
+

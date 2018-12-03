@@ -9,7 +9,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 10.6667, 10 )
 
-[node name="PlayerCharacter" type="KinematicBody2D" index="0"]
+[node name="PlayerCharacter" type="KinematicBody2D"]
 
 position = Vector2( 424.125, 280 )
 scale = Vector2( 0.996094, 1 )
@@ -33,7 +33,6 @@ _sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Transform",
 position = Vector2( 9.53674e-007, 4.76837e-006 )
 scale = Vector2( 2.34146, 2.46154 )
 shape = SubResource( 1 )
-_sections_unfolded = [ "Material", "Visibility" ]
 
 [node name="Pivot" type="Position2D" parent="." index="2"]
 
